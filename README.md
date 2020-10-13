@@ -3,7 +3,7 @@
 
 ## Usage
 
-`chars` accepts no arguments and simply prints the following tables:
+`chars` accepts no arguments and simply prints the following tables ([raw](https://raw.githubusercontent.com/ardnew/chars/main/chars.out)):
 
 ```
       [ DEC  HEX  OCT   CHAR ]      [ DEC  HEX  OCT   CHAR ]      [ DEC  HEX  OCT   CHAR ]      [ DEC  HEX  OCT   CHAR ]
