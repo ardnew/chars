@@ -1,7 +1,24 @@
-# chars ([raw output](https://raw.githubusercontent.com/ardnew/chars/main/chars.out))
+# chars
 #### Print ASCII and regular expression character class tables
 
 ## Usage
+
+### curl ([raw output](https://raw.githubusercontent.com/ardnew/chars/main/chars.out))
+
+You can generate these tables *without installing this script* by fetching the raw output kept in this repo:
+
+`$ curl https://raw.githubusercontent.com/ardnew/chars/main/chars.out`
+
+Making a shell alias or function is easier than remembering that URL. Add the following to your shell startup script (e.g., `~/.bashrc`, `~/.zshrc`):
+
+```sh
+chars() {
+    p=$( type -P chars ) && "${p}" && return
+    curl "https://raw.githubusercontent.com/ardnew/chars/main/chars.out"
+}
+```
+
+### Perl
 
 `chars` accepts no arguments and simply prints the following tables:
 
