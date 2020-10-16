@@ -1,9 +1,9 @@
-# chars
+# chars ([raw output](https://raw.githubusercontent.com/ardnew/chars/main/chars.out))
 #### Print ASCII and regular expression character class tables
 
 ## Usage
 
-`chars` accepts no arguments and simply prints the following tables ([raw](https://raw.githubusercontent.com/ardnew/chars/main/chars.out)):
+`chars` accepts no arguments and simply prints the following tables:
 
 ```
       [ DEC  HEX  OCT   CHAR ]      [ DEC  HEX  OCT   CHAR ]      [ DEC  HEX  OCT   CHAR ]      [ DEC  HEX  OCT   CHAR ]
