@@ -1,0 +1,23 @@
++ ------ + -- + ---------------------------------- + ------------------------- +
+| POSIX* | pl |              ASCII                 |        Description        |
++ ------ + -- + ---------------------------------- + ------------------------- +
+| alnum  | -- | [A-Za-z0-9]                        | alphanumeric              |
+|  word* | \w | [A-Za-z0-9_]                       | alphanumeric + underscore |
+|   --   | \W | [^A-Za-z0-9_]                      | non-word                  |
+| alpha  | -- | [A-Za-z]                           | alphabetic                |
+| ascii* | -- | [\x00-\x7F]                        | ASCII standard            |
+| blank  | -- | [ \t]                              | space and tab             |
+|   --   | \b | (?<=\W)(?=\w)|(?<=\w)(?=\W)        | word boundary             |
+| cntrl  | -- | [\x00-\x1F\x7F]                    | control character         |
+| digit  | \d | [0-9]                              | digit                     |
+|   --   | \D | [^0-9]                             | non-digit                 |
+| graph  | -- | [\x21-\x7E]                        | visible                   |
+| lower  | -- | [a-z]                              | lowercase alphabetic      |
+| print  | -- | [\x20-\x7E]                        | visible and space         |
+| punct  | -- | [][!"#$%&'()*+,./:;<=>?@\^_`{|}~-] | punctuation               |
+| space  | \s | [ \t\r\n\v\f]                      | whitespace                |
+|   --   | \S | [^ \t\r\n\v\f]                     | non-whitespace            |
+| upper  | -- | [A-Z]                              | uppercase alphabetic      |
+| xdigit | -- | [A-Fa-f0-9]                        | hexadecimal digit         |
+|   --   | -- | [^A-Fa-f0-9]                       | non-hexadecimal digit     |
++ ------ + -- + ---------------------------------- + ------------------------- +
