@@ -343,7 +343,8 @@ charclass
 ## Extra
 
 #### Unicode symbols (Category `Cc`) for C0 Control Codes
-|----|-----|-|
+|#|Symbol|Glyph|
+|:--:|:---:|:-:|
 |`00`|`NUL`|␀|
 |`01`|`SOH`|␁|
 |`02`|`STX`|␂|
