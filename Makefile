@@ -1,24 +1,25 @@
-default := /usr/local
-
-ifeq ($(PREFIX),)
-    PREFIX := $(default)
-endif
-
-table := $(wildcard *.tbl)
-script := $(wildcard *.sh)
+# wildcard expands to all existing paths found;
+# and we want the first among them.
+PREFIX ?= $(firstword $(wildcard ${HOME}/.local /usr/local))
 
 datadir = $(DESTDIR)$(PREFIX)/share/ascii.tbl
 bindir = $(DESTDIR)$(PREFIX)/bin
 
-.PHONY: install
+table = $(wildcard *.tbl)
+script = $(wildcard *.sh)
 
-install: $(table) $(script)
+.PHONY: all install
 
-$(table):: $(datadir)
-	install -m 644 $@ $^/$@
+all:
+	@echo ' · Using "make install" will run the following (PREFIX="$(PREFIX)"):'
+	@make install --dry-run | sed 's/^/  | /'
+	@echo ' · Dry run complete'
+	@echo '  | note: Nothing installed!'
 
-$(script):: $(bindir)
-	install -m 755 $@ $^/$(basename $@)
+install:: $(table) $(script)
 
-$(datadir) $(bindir):
-	install -d $@
+$(table)::
+	-install -TDm 644 $@ $(datadir)/$@
+
+$(script)::
+	-install -TDm 755 $@ $(bindir)/$(basename $@)
